@@ -1,11 +1,12 @@
 # Java 的构造方法你真的懂了吗？
-内容基于```java 8```。我对```JVM```懂得不是很多，内容不一样是对的，有错的会慢慢纠正。
+内容基于```java 8```。我对```JVM```懂得不是很多，内容不一定是对的，有错的会慢慢纠正。
 
 ## 证明类是有构造方法的，即使没有写，编译器也会自动生成
 例1和例2两个类（编译后）是等效的。因为如果类中没有构造方法，编译器会生成一个默认的构造方法（无参构造方法）。
 同时也证明了```<init>```方法就是构造方法，例1及例2只证明了无参构造方法，构造方法的重载请读者自己动手试试。
-还有个参考文献可以证明：_The Java ® Virtual Machine Specification, Java SE 8 Edition, 2.9 Special Methods_，其中第一段就说明了：
-***At the level of the Java Virtual Machine, every constructor written in the Java programming language (JLS §8.8) appears as an instance initialization method that has the special name <init> .***
+
+还有个参考文献可以证明：_The Java ® Virtual Machine Specification, Java SE 8 Edition, 2.9 Special Methods_
+> At the level of the Java Virtual Machine, every constructor written in the Java programming language (JLS §8.8) appears as an instance initialization method that has the special name \<init\> .
 
 ```java
 // 例1
