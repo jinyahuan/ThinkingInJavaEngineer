@@ -7,5 +7,4 @@
 
 如果有错误您看到了，非常希望能够指出来。欢迎来```Issues```区交流，也可以邮件沟通（从我最后一次commit找，因为没有固定的邮箱）。
 
-todo 
-1. 构造方法你真的懂了吗？
+1. [构造方法你真的懂了吗？](docs/qa/java/java_qa_00012_do_you_know_constructor.md)
