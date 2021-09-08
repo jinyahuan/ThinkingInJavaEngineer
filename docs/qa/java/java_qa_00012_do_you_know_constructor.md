@@ -42,76 +42,93 @@ public class Constructor_1_Explicit {
 ```java
 // 例5
 public class Constructor_3_Field_201 {
-    private int id = 129;
-    private long no = 666;
-    private boolean flag = false;
+    private boolean flag1 = true;
+    private int id1 = 129;
+    private long no1 = 666;
+    private int id2 = 130;
+    private long no2 = 667;
+    private boolean flag2 = true;
 }
 // 例6
 public class Constructor_3_Field_202 {
-    private int id = 129;
-    private long no = 666;
-    private boolean flag;
-    public Constructor_3_Field_202() {
-        flag = true;
+    private boolean flag1 = true;
+    private int id1 = 129;
+    private long no1 = 666;
+    public Constructor_3_Field_202(long no, int id) {
+        this.flag2 = false;
+        this.id1 = id;
+        this.no2 = id;
     }
-    public Constructor_3_Field_202(int id, long no) {
-        flag = true;
-        this.no = no;
-        this.id = id;
-    }
+    private int id2 = 130;
+    private long no2 = 667;
+    private boolean flag2 = true;
 }
 ```
 
 ```
   // 例5类编译后的字节码
-  public cn.jinyahuan.course.java.constructor.Constructor_3_Field_201();
+  public Constructor_3_Field_201();
+    descriptor: ()V
+    flags: ACC_PUBLIC
     Code:
-       0: aload_0
-       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
-       4: aload_0
-       5: sipush        129
-       8: putfield      #2                  // Field id:I
-      11: aload_0
-      12: ldc2_w        #3                  // long 666l
-      15: putfield      #5                  // Field no:J
-      18: aload_0
-      19: iconst_0
-      20: putfield      #6                  // Field flag:Z
-      23: return
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iconst_1
+         6: putfield      #2                  // Field flag1:Z
+         9: aload_0
+        10: sipush        129
+        13: putfield      #3                  // Field id1:I
+        16: aload_0
+        17: ldc2_w        #4                  // long 666l
+        20: putfield      #6                  // Field no1:J
+        23: aload_0
+        24: sipush        130
+        27: putfield      #7                  // Field id2:I
+        30: aload_0
+        31: ldc2_w        #8                  // long 667l
+        34: putfield      #10                 // Field no2:J
+        37: aload_0
+        38: iconst_1
+        39: putfield      #11                 // Field flag2:Z
+        42: return
 
   // 例6类编译后的字节码
-  public cn.jinyahuan.course.java.constructor.Constructor_3_Field_202();
+  public Constructor_3_Field_202(long, int);
+    descriptor: (JI)V
+    flags: ACC_PUBLIC
     Code:
-       0: aload_0
-       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
-       4: aload_0
-       5: sipush        129
-       8: putfield      #2                  // Field id:I
-      11: aload_0
-      12: ldc2_w        #3                  // long 666l
-      15: putfield      #5                  // Field no:J
-      18: aload_0
-      19: iconst_1
-      20: putfield      #6                  // Field flag:Z
-      23: return
-  public cn.jinyahuan.course.java.constructor.Constructor_3_Field_202(int, long);
-    Code:
-       0: aload_0
-       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
-       4: aload_0
-       5: sipush        129
-       8: putfield      #2                  // Field id:I
-      11: aload_0
-      12: ldc2_w        #3                  // long 666l
-      15: putfield      #5                  // Field no:J
-      18: aload_0
-      19: iconst_1
-      20: putfield      #6                  // Field flag:Z
-      23: aload_0
-      24: lload_2
-      25: putfield      #5                  // Field no:J
-      28: aload_0
-      29: iload_1
-      30: putfield      #2                  // Field id:I
-      33: return
+      stack=3, locals=4, args_size=3
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iconst_1
+         6: putfield      #2                  // Field flag1:Z
+         9: aload_0
+        10: sipush        129
+        13: putfield      #3                  // Field id1:I
+        16: aload_0
+        17: ldc2_w        #4                  // long 666l
+        20: putfield      #6                  // Field no1:J
+        23: aload_0
+        24: sipush        130
+        27: putfield      #7                  // Field id2:I
+        30: aload_0
+        31: ldc2_w        #8                  // long 667l
+        34: putfield      #10                 // Field no2:J
+        37: aload_0
+        38: iconst_1
+        39: putfield      #11                 // Field flag2:Z
+        42: aload_0
+        43: iconst_0
+        44: putfield      #11                 // Field flag2:Z
+        47: aload_0
+        48: iload_3
+        49: putfield      #3                  // Field id1:I
+        52: aload_0
+        53: iload_3
+        54: i2l
+        55: putfield      #10                 // Field no2:J
+        58: return
 ```
